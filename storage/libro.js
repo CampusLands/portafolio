@@ -12,6 +12,7 @@ const validarExtructura = (data={})=>{
         categoriaId=null, 
         editorialId=null, 
         titulo=null, 
+        imagen=null, 
         fechaLanzamiento=null, 
         isbn=null, 
         numPaginacion=null, 
@@ -22,6 +23,7 @@ const validarExtructura = (data={})=>{
     
     if(typeof autorId !== 'number') return {status: 400, message: `El autorId '${autorId}' no cumple con el formato`};
     if(typeof categoriaId !== 'number') return {status: 400, message: `El categoriaId '${categoriaId}' no cumple con el formato`};
+    if(typeof imagen !== 'string') return {status: 400, message: `La imagen '${imagen}' no cumple con el formato`};
     if(typeof editorialId !== 'number') return {status: 400, message: `El editorialId '${editorialId}' no cumple con el formato`};
     if(typeof titulo !== 'string') return {status: 400, message: `El titulo '${titulo}' no cumple con el formato`};
     if(typeof isbn !== 'string') return {status: 400, message: `El isbn '${isbn}' no cumple con el formato`};
